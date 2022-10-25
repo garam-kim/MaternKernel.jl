@@ -321,8 +321,8 @@ function FrankWolfe.compute_extreme_point(lmo::MarginalPolytope, direction::Kern
     optimal_value = Inf
     optimal_vertex = nothing
     current_vertex = nothing
-    for iteration in 0:lmo.number_iterations
-        current_vertex = KernelHerdingIterate([1.0], [-1 + 2 * iteration / (lmo.number_iterations)])
+    for iteration in 1:lmo.number_iterations 
+        current_vertex = KernelHerdingIterate([1.0], [-1 + (2 * iteration -1) / (lmo.number_iterations)])
         current_value = dot(direction, current_vertex)
         if current_value < optimal_value
             optimal_vertex = current_vertex

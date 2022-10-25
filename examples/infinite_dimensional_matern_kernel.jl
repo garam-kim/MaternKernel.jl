@@ -7,7 +7,7 @@ include(joinpath(dirname(pathof(FrankWolfe)), "../examples/plot_utils.jl"))
 
 
 
-# ## Finite-dimensional kernel herding
+# ## Infinite-dimensional kernel herding
 # We focus on a specific kernel studied in ([Tsuji et al.](https://proceedings.mlr.press/v162/tsuji22a/tsuji22a.pdf)), that has an infinite dimensional feature space.
 # Let $\mathcal{Y} = [-1, 1]$ and
 # ```math
